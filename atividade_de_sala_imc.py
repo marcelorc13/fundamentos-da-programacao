@@ -2,19 +2,17 @@ def calcular_imc (altura, peso):
     resultado = peso/(altura * 2)
     
     if resultado < 18.5:
-        return('Abaixo do Peso')
+        return(f'Seu IMC é {resultado} Abaixo do Peso')
     elif resultado < 25:
-        return('Peso Ideal')
+        return(f'Seu IMC é {resultado} Peso Ideal')
     elif resultado < 30:
-        return('Levemente acima do peso')
+        return(f'Seu IMC é {resultado} Levemente acima do peso')
     elif resultado < 35:
-        return('Obesidade Grau I')
+        return(f'Seu IMC é {resultado} Obesidade Grau I')
     elif resultado < 40:
-        return('Obesidade Grau II')
+        return(f'Seu IMC é {resultado} Obesidade Grau II')
     else :
-        return('Obesidade III (Mórbida)')
+        return(f'Seu IMC é {resultado} Obesidade III (Mórbida)')
             
 
-res = calcular_imc(1.8, 50)
-
-print(res)
+print(calcular_imc(1.8, 50))
