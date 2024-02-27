@@ -1,5 +1,11 @@
-def calcular_imc (altura, peso):
-    resultado = peso/(altura * 2)
+def calcular_imc(altura,peso):
+    resultado = peso / (altura * altura)
+    
+    return resultado
+
+#Função Aprimorada
+def calcular_imc_aprimorada (altura, peso):
+    resultado = peso/(altura ** 2)
     
     if resultado < 18.5:
         return(f'Seu IMC é {resultado} Abaixo do Peso')
@@ -13,6 +19,7 @@ def calcular_imc (altura, peso):
         return(f'Seu IMC é {resultado} Obesidade Grau II')
     else :
         return(f'Seu IMC é {resultado} Obesidade III (Mórbida)')
-            
+          
+print(calcular_imc(1.8, 50))            
 
-print(calcular_imc(1.8, 50))
+print(calcular_imc_aprimorada(1.8, 50))
